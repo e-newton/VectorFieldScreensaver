@@ -2,6 +2,7 @@
   <library name="vecmath">
     <CLASSES>
       <root url="jar://$USER_HOME$/Downloads/vecmath.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/vecmath.jar/vecmath.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

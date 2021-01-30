@@ -23,7 +23,7 @@ public class ScreenSaver {
         final JFrame screenSaverFrame = new JFrame();
         screenSaverFrame.setDefaultCloseOperation(
                 WindowConstants.EXIT_ON_CLOSE);
-        screenSaverFrame.setUndecorated(false);
+//        screenSaverFrame.setUndecorated(false);
         screenSaverFrame.setResizable(true);
         screenSaverFrame.setLayout(new BorderLayout());
 //        screenSaverFrame.add(new JLabel("This is a Java Screensaver!",
@@ -47,12 +47,12 @@ public class ScreenSaver {
         screenSaverFrame.addMouseMotionListener(new MouseMotionListener() {
             @Override
             public void mouseDragged(MouseEvent e) {
-                System.exit(0);
+//                System.exit(0);
             }
 
             @Override
             public void mouseMoved(MouseEvent e) {
-                System.exit(0);
+//                System.exit(0);
             }
         });
         screenSaverFrame.addMouseListener(new MouseListener() {
@@ -88,6 +88,8 @@ public class ScreenSaver {
         screenSaverFrame.getContentPane().setCursor(blankCursor);
         screenSaverFrame.validate();
         screenSaverFrame.pack();
+        screenSaverFrame.setVisible(true);
+        screenSaverFrame.setSize(256, 256);
         GraphicsEnvironment.getLocalGraphicsEnvironment()
                 .getDefaultScreenDevice()
                 .setFullScreenWindow(screenSaverFrame);
@@ -98,5 +100,7 @@ public class ScreenSaver {
             }
         });
         timer.start();
+        System.out.println("end");
+
     }
 }
